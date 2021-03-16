@@ -61,10 +61,10 @@ if today in birthdays_dict:
 # HINT 3: Remember to login to your email service with email/password. Make sure your security setting is set to allow less secure apps.
 # HINT 4: The message should have the Subject: Happy Birthday then after \n\n The Message Body.
 
-with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com") as connection:
 
-    connection.starttls()
-    connection.login(user=MY_USER, password=MY_PASSWORD)
-    connection.sendmail(from_addr=MY_USER, to_addrs=birthday_person["name"], msg=f"Subject: Happy Birthday!\n\n{new_letter}")
+        connection.starttls()
+        connection.login(user=MY_USER, password=MY_PASSWORD)
+        connection.sendmail(from_addr=MY_USER, to_addrs=birthday_person["email"], msg=f"Subject: Happy Birthday!\n\n{new_letter}")
 
 
